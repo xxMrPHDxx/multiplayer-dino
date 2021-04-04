@@ -4,6 +4,7 @@ class Game():
 	def __init__(self, width, height):
 		self.__width, self.__height = width, height
 		self.__sm = StateManager(self)
+		self.should_exit = False
 
 		# Start at menu screen
 		self.state.set(MenuState)
