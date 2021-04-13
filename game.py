@@ -1,4 +1,5 @@
-from gamestate import StateManager, MenuState
+from gamestate import StateManager, MenuState, PlayState
+from sprite import SpriteSheet
 
 class Game():
 	def __init__(self, width, height):
@@ -6,14 +7,21 @@ class Game():
 		self.__sm = StateManager(self)
 		self.should_exit = False
 
+		# Assets
+		self.__sheet = SpriteSheet.load('assets/sheet.json')
+
 		# Start at menu screen
-		self.state.set(MenuState)
+		# self.state.set(MenuState)
+		# TODO: Remove later
+		self.state.set(PlayState)
 	@property
 	def width(self): return self.__width
 	@property
 	def height(self): return self.__height
 	@property
 	def state(self): return self.__sm
+	@property
+	def sheet(self): return self.__sheet
 	def update(self):
 		self.state.update()
 	def draw(self, screen):
