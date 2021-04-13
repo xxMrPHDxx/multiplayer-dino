@@ -1,0 +1,13 @@
+{
+	"image": "assets/sheet.png",
+	"sprites": [
+		{
+			"name": "dino-idle-1",
+			"region": [1650, 0, 86, 94, 43, 47]
+		},
+		{
+			"name": "dino-idle-2",
+			"region": [1736, 0, 86, 94, 43, 47]
+		}
+	]
+}
